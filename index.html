@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"  name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>seoultech_vd_40th_test</title>
+	<link rel="icon" type="image/x-icon" href="./common/pav1.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./common/mouse.css">
+  <link rel="stylesheet" type="text/css" href="./common/common.css">
+  <link rel="stylesheet" type="text/css" href="./common/footer.css">
+  <link rel="stylesheet" type="text/css" href="./common/nav.css">
+
+	<style type="text/css">
+  	/* about(메인) 페이지 스타일 */
+  	.main_section{display: block; margin: 25vh 0;}
+  	.text{font-size: 1.1rem; line-height: 1.6;word-break: keep-all; letter-spacing: -0.4px; color: #13519c;}
+    .label{font-size: 1.5rem; line-height: 2; word-break: keep-all; letter-spacing: -1px;color: #13519c; font-weight: 800;}
+  	/* 메인페이지 등에서는 index_title를 block, 개별 프로젝트 페이지에서는 detail_title을 block */
+  	#index_title{display: block;}
+  	#detail_title{display: none;}
+    #big_section{display: flex;}
+
+    #Anim_main_container{
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    #Anim_main {
+      overflow: hidden;
+      z-index: -100;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      margin: auto;
+      height: 100vh;
+    }
+    #Anim_main > svg {
+      position: relative;
+      left: 50% !important;
+      transform: translate3d(-50%, 0, 0) !important;
+      width: auto !important;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    @media only screen and (max-width: 767px){
+      .main_section{display: block; margin: 10vh 5vw 0;}
+      .label{font-size: 20px; line-height: 24px; margin-bottom: 15px; font-weight: 800;}
+      .text{font-size: 15px; line-height: 24px;}
+      #big_section{display: block;}
+      #Anim_main > svg {
+        transform: translate3d(-50%, 0, 0) scale3d(0.7, 0.7, 1) !important;
+      }
+    }
+
+
+
+	</style>
+
+</head>
+
+<body id="body">
+	<!-- cursor 코드 -->
+	
+	<div id="customCursor1" class="cursor">
+
+      <svg id="cursor1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor1_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor1_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+
+    <div id="customCursor2" class="cursor">
+
+      <svg id="cursor2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor2_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor2_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+
+    <div id="customCursor3" class="cursor">
+
+      <svg id="cursor3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor3_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor3_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+    <div id="customCursor4" class="cursor">
+
+      <svg id="cursor4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor2_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor2_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+
+    <div id="customCursor5" class="cursor">
+
+      <svg id="cursor5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor1_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor1_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+
+    <div id="customCursor6" class="cursor">
+
+      <svg id="cursor6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.61 84.61">
+      <path class="cursor3_Fill" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/>
+      <path class="cursor3_Stroke" d="M8.48,42.31c27.86,3.3,30.53,5.97,33.83,33.83,3.3-27.86,5.97-30.53,33.83-33.83-27.86-3.3-30.53-5.97-33.83-33.83-3.3,27.86-5.97,30.53-33.83,33.83Z"/></svg>
+
+    </div>
+
+
+
+
+	<nav id="nav"> 
+			<a href="index.html" class="nav_title flex_8" style="line-height: 0.8;">Celeblossom<span style="line-height: 70px; margin: 0; font-size: calc(1rem + 2vw)">서울과학기술대학교 시각디자인전공<br>제40회 졸업전시</span></a>
+			<div class="flex_1"></div>
+			<div class="nav_menu flex_3">
+				<a href="project.html" class="flex_1">프로젝트<span>Project</span></a>
+				<a href="profile.html" class="flex_1">프로필<span>Profile</span></a>
+				<a href="guestbook.html" class="flex_1">방명록<span>Blossom</span></a>
+				</div>
+	</nav>
+
+	<nav id="m_nav">
+		<header id="navHead">
+			<a href="index.html" id="index_title"><img src="./common/icon_40th.svg"></a>
+			<a href="index.html" id="detail_title">
+				<p class="mKr">제목 입력란 1줄<br>제목 입력란 2줄</p>
+				<span class="mEn">English title row 1<br>English title row 2</span></a>
+			<div id="menuBtn">
+				<img src="./common/icon_mnav1.svg" class="menuBtn"></img>
+			</div>
+		</header>
+		<div id="navBox" class="menuWrap">
+				<a href="project.html" style="border-top: 1px solid #13519c; padding-top: 10px;" >프로젝트 Project</a>
+				<a href="profile.html">프로필 Profile</a>
+				<a href="guestbook.html">방명록 Blossom</a>
+		</div>
+
+	</nav>
+
+<!-- 애니메이션 -->
+	<section class="flex_12" id="Anim_main_container">
+		<div id="Anim_main"></div>
+	</section>
+
+
+<!-- 본문 -->
+
+<div id="big_section">
+  <div class="flex_3"></div>
+  <div class="flex_6">
+  <section class="flex_12 main_section" style="display: flex;"> 
+    <div class="flex_1 text">서울과학기술대학교<br>시각디자인전공<br>제40회 졸업전시</div>
+    <div class="flex_1"></div>
+    <div class="flex_4 text">2022. 11. 08. - 2022. 11. 14. <br>10:00 - 20:00<br>서울과학기술대학교 백주년기념관 1F, 2F, 3F</div>
+  </section>
+
+	<section class="flex_12 main_section"> 
+		<div class="flex_1"></div>
+		<div class="flex_1 label">The Blossom of Celebration: Celeblossom</div>
+		<div class="flex_3 text">우리는 최소 4년간의 학업을 거쳐 졸업작품이라는 결과를 피워냈습니다. 이 과정은 때로는 뿌듯하고, 때로는 괴롭고, 때로는 행복했습니다. 다양한 감정 속에서 졸업작품을 완성하는 시간은 결코 쉽지 않았기에, 우리는 수많은 감정을 느낀 만큼의 의미를 담아 스스로에게 건넬 수 있는 선물을 고민했습니다. 꽃다발은 축하와 위로, 격려와 감사 등의 많은 인사를 한 번에 담을 수 있는 선물입니다. 축하의 폭죽이 팡 터지는 듯한 꽃다발을 한 잎 한 잎 그려내며, 우리의 마음이 생생히 전해질 수 있기를 바랐습니다.<br>서울과학기술대학교 조형대학 디자인학과 시각디자인 프로그램 제40회 졸업전시에서는 성장의 시간을 거쳐 졸업을 마주하는 우리들에게, 스스로 축하와 격려의 꽃다발인 Celeblossom을 안깁니다.</div>
+		<div class="flex_1"></div>
+	</section>
+	
+	<section class="flex_12 main_section"> 
+		<div class="flex_1"></div>
+		<div class="flex_1 label">격려사</div>
+		<div class="flex_3 text">디자인학과 시각디자인전공 학생들의 40회 졸업전시회를 진심으로 축하합니다. 설레이는 마음으로 학교에 입학하여 다양한 수업과 여러가지 활동들을 통해 디자이너로서의 자질과 역량을 발전시키고 이제 사회로 나갈 준비가 된 여러분들이 자랑스럽습니다. 여러분은 이제 졸업전시를 맞이하게 되었습니다. 많은 에너지를 쏟아 준비한 만큼 졸업전시가 여러분의 기억에 남을 특별하고 소중한 경험이 되기를 바랍니다. 그리고 여러분들의 대학 생활동안 힘껏 여러분들을 응원하고 지원해주신 부모님들과 지도해주신 교수님들께도 학과장으로서 감사드립니다. 이제 학교를 떠나 사회로 나아가게 되는 여러분들이 각자 자신만이 가지고 있는 고유한 개성과 기질, 그리고 특별한 재능을 따라 여러분 한 사람 한 사람에게 가장 잘 맞는 길로 나아갈 수 있게 되기를 바랍니다. 그리고 그 길에서 만나게 될 수많은 다양한 경험들이 여러분들을 성장시키고 성숙시키는 값진 자산이 되길 바랍니다. 언제 어디서나 서울과학기술대학교 시각디자인과 동문임을 소중하게 여기는 여러분들이 되길 바랍니다. 여러분들을 응원합니다.<br><br>디자인학과 시각디자인전공 학과장<br>유은</div>
+		<div class="flex_1"></div>
+	</section>
+
+  <section class="flex_12 main_section"> 
+    <div class="flex_1"></div>
+    <div class="flex_1 label">오시는 길</div>
+    <div class="flex_3 text"> 
+      <div id="map" style="width:100%; height: 500px;"></div>
+      <br>7호선 공릉역 - 노원13번 서울과학기술대학교정문앞<br>7호선 공릉역 - 노원03 서울과학기술대앞
+    </div>
+    <code id="snippet" class="snippet"></code>
+    <div class="flex_1"></div>
+  </section>
+
+  <section class="flex_12 main_section"> 
+    <div class="flex_1"></div>
+    <div class="flex_1 label">졸업준비위원회</div>
+    <div class="flex_3 text" style="display:flex;">
+      <div class="flex_1">위원장<br>부위원장<br><br>편집<br><br><br><br>공간<br><br><br><br>홍보<br><br><br>웹 아카이브</div>
+      <div class="flex_1">최현서<br>유현영<br><br>남승주<br>도수미<br>장서현<br><br>최현서<br>유현영<br>임주연<br><br>노덕영<br>김은솔<br><br>김나윤<br>김승민</div>
+      <div class="flex_2"></div>
+    </div>
+    <div class="flex_1"></div>
+  </section>
+
+    <section class="flex_12 main_section"> 
+    <div class="flex_1"></div>
+    <div class="flex_1 label">전시 참여자</div>
+    <div class="flex_3 text" style="display:flex;">
+      <div class="flex_1">고윤오<br>김가은<br>김다은<br>김도연<br>김도영<br>김민주<br>김민지<br>김세림</div>
+      <div class="flex_1">김아람<br>김주영<br>김지연<br>김태연<br>김현조<br>나윤경<br>남승주<br>노희정</div>
+      <div class="flex_1">도수미<br>마선형<br>문성웅<br>박금강<br>박세림<br>박소희<br>박시원<br>배가원</div>
+      <div class="flex_1">배세련<br>백미나<br>송도은<br>송채현<br>신화연<br>안수오<br>안예슬<br>양희수</div>
+      <div class="flex_1">오재란<br>원준아<br>유지원<br>유현영<br>윤예원<br>이규리<br>이미주<br>이병수</div>
+      <div class="flex_1">이예빛<br>이유나<br>이지현<br>이진희<br>이희주<br>임비아<br>임주연<br>임효선</div>
+      <div class="flex_1">정서현<br>정그린<br>정다현<br>정려립<br>정혜림<br>최한솔<br>최현서<br>한다민</div>
+      <div class="flex_1">홍미현<br>으엉 티엣탄</div>
+  </section>
+</div>
+<div class="flex_3"></div>
+</div>
+
+ <!-- 푸터 -->
+    <footer>
+      <img src="./common/footer_Left.svg" class="footer_Left">
+      <img src="./common/footer_Right.svg" class="footer_Right">
+      
+      <div>
+        <p class="footerKr">서울과학기술대학교</br>시각디자인학과 제40회 졸업전시</p>
+        <p class="footerEn">2022©Seoul National University of Science</br>and Technology. All Rights Reserved.</p>
+      </div>
+      <div class="flex">
+        
+          <a  class="link" href="https://vd.seoultech.ac.kr/" >
+            <img src="./common/seoultech.svg" class="seoultechIcon">
+            
+          </a>
+        
+          <a  class="link" href="https://www.instagram.com/snad_vd/">
+            <img src="./common/instagram.svg" class="instaIcon">
+            
+          </a>
+        
+      </div>
+         
+    </footer>
+   
+
+  	<script src="./common/nav.js"></script>
+    <script src="./common/mouse.js"></script>
+    <script src="./common/font.js"></script>
+    <script src="./common/footer.js"></script>
+    <script src="./common/Anim_main.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=yc2ofvcytj"></script>
+    <script id="code">
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.6305583,127.0784899), //지도의 초기 중심 좌표
+            zoom: 17, //지도의 초기 줌 레벨
+            minZoom: 8, //지도의 최소 줌 레벨
+            zoomControl: true, //줌 컨트롤의 표시 여부
+            zoomControlOptions: { //줌 컨트롤의 옵션
+                position: naver.maps.Position.TOP_RIGHT
+        }});
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.6305583,127.0784899),
+
+            icon: {
+              url: "./common/map-icon.svg",
+              scaledSize: new naver.maps.Size(80, 80),
+              origin: new naver.maps.Point(0, 0),
+            },
+           
+            map: map
+        });
+    </script>
+</body>
+</html>
