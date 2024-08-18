@@ -17,7 +17,8 @@
 
     /* 데스크탑 나브 바 */
     #m_nav{display: none;}
-	#nav { 			
+	#nav { 	
+        z-index: 100;		
 		color: #13519c;
 		height: auto; 
 		position: fixed;
@@ -33,9 +34,9 @@
 
     
 
-	.nav_title {font-size: calc(1rem + 3vw); white-space: nowrap; line-height: 1.2; font-family: HV; color:#ef8b9e;}
+	.nav_title {font-size: calc(1rem + 3vw); white-space: nowrap; line-height: 1.2em; font-family: HV; color:#ef8b9e;}
 	.nav_title:hover {font-size: 0;}
-    .nav_title span{display: none; font-size: calc(1rem + 3vw);;}
+    .nav_title span{display: none; font-size: calc(1rem + 3vw);line-height: 1.2em;}
   	.nav_title:hover span{display: block;}
   	
   	.nav_menu {display: flex; margin-top: 3px; font-size: calc(0.5rem + 1vw); text-align: right;}
