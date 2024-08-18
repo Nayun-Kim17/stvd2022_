@@ -1,7 +1,12 @@
  @media only screen and (min-width: 767px) {
             /**좌우 여백 마진*/
-            html{overflow-x: hidden;}
-            section{padding:0 1vw;}
+            html{overflow-x: hidden;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */}
+            html::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+            }
+            section{padding:0 1.5vw;}
             
 
             p{color:#13519c;}
@@ -14,7 +19,7 @@
             .main{
                  min-height: 100vh;
                 display: flex;
-                padding-top:28vh;
+                padding-top:22vh;
               padding-bottom: 6vh;}
 
                 #right{
@@ -22,6 +27,7 @@
                     order:0; 
                     }
                         #right img{width:100%;}
+
                         #right .empty {order:0;}
                         #right .flex_5{order:1;}
                 #left{display: flex; 
@@ -35,7 +41,7 @@
                         .empty{order:0; display:block; opacity: 0;}
                         .text{order:1;}
                         .text a{margin-left: 2vw;}
-                                .Kr{font-size:calc(12px + 0.4rem); line-height: 1.7em; word-break: keep-all;}
+                                .Kr{font-size: clamp(1rem, 0.8281rem + 0.3581vw, 1.6875rem); line-height: 1.85; word-break: keep-all;}
                                 .Kr p{margin-bottom:2vh;}
                                 .En{display: none; font-size:calc(12px + 0.4rem); line-height: 1.7em; word-break: keep-all;}
                                 .En p{margin-bottom:2vh;}
@@ -75,6 +81,22 @@
                     .track{display: flex; align-items: center;}
                     .empty2{display: none;}
 
+              #right{flex:49;}
+              #left{flex:48;}
+              #right div:nth-child(1){flex:42;}
+              #right div:nth-child(2){flex:7;}
+              #left div:nth-child(1){flex:7;}
+              #left div:nth-child(2){flex:39;}
+              #left div:nth-child(3){flex:8;}
+
+              #info {padding:0 8vw;}
+              #info div:nth-child(1){flex:15;}
+              #info div:nth-child(2){flex:15;}
+              #info div:nth-child(3){flex:14;}
+              #info div:nth-child(4){flex:16;}
+              #info div:nth-child(5){flex:16;}
+              #info div:nth-child(6){flex:0;}
+
 *{background-repeat: no-repeat!important;
               background-position: center;}
         }
@@ -94,6 +116,7 @@
           #right{order:0; 
              padding-bottom: 4vh;}
               #right img{width:100%;}
+
               .empty {display: none;}
               .text a{margin-left: 3vw;}
           #left{}
