@@ -28,6 +28,7 @@
     .labelkr{font-size: clamp(1.45rem, 0.8281rem + 0.3581vw, 2.284rem); line-height: 1.95rem; padding-bottom: 1.267rem;}
     .labelEn{font-size: clamp(1.5rem, 0.8281rem + 0.3581vw, 2.3rem); line-height: 1.75rem;}
     .flex_1 {margin-right: 1rem;}
+    .flex_0 {margin-right: 1rem; flex:0;}
     .comment{word-break: break-all;}
     .place div{line-height: 1.55;}
     .textRight{text-align: right;}
@@ -135,8 +136,11 @@
 
 
 	<nav id="nav"> 
-			<a href="index.html" class="nav_title flex_8" style="line-height: 0.8;">Celeblossom<span style="line-height: 70px; margin: 0; font-size: calc(1rem + 2vw)">서울과학기술대학교 시각디자인전공<br>제40회 졸업전시</span></a>
-			<div class="flex_1"></div>
+			<a href="index.html" class="nav_title flex_8">
+        <p style="font-size:1.2rem; line-height: 1.25;">서울과학기술대학교 시각디자인전공 제40회 졸업전시</p>
+        <p style="font-size:clamp(3.45rem, 0.8281rem + 0.3581vw, 3.45rem); line-height: 1.0;">Celeblossom</p>
+      </a>
+			
 			<div class="nav_menu flex_3">
 				<a href="project.html" class="flex_1">프로젝트<span>Project</span></a>
 				<a href="profile.html" class="flex_1">프로필<span>Profile</span></a>
@@ -203,7 +207,7 @@
    <div class="flex right">
       <div class="col7"></div>
       <div class="col33 flex"> 
-        <div class="flex_1 place">
+        <div class="flex_0 place">
             <div class="text">날짜</div>
             <div class="text">시간</div>
             <div class="text">장소</div>
